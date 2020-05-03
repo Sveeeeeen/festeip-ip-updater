@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check FIP_HOSTID
+if [ ! -n "$FIP_HOSTID" ]; then
+    echo "Your need to supply the FIP_HOSTID!"
+    exit 1
+fi
+
 # Check FIP_HOSTNAME
 if [ ! -n "$FIP_HOSTNAME" ]; then
     echo "Your need to supply the FIP_HOSTNAME!"
