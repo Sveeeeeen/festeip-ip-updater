@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL maintainer="sven.bloch@gmail.com"
 
 RUN apk add --update \
-bash curl
+bash curl dig
 
 COPY updater.sh /updater.sh
 RUN chown root:root /updater.sh
