@@ -26,6 +26,11 @@ fi
 # Loop loop loop...
 while true
 do
-	echo "Press [CTRL+C] to stop.."
-	sleep $FIP_INTERVAL
+    set -x
+	
+    # get fancy
+    curl "https://$FIP_HOSTID:$FIP_PASSWORD@members.feste-ip.net/nic/update?hostname=$FIP_HOSTNAME"
+	
+    set +x
+    sleep $FIP_INTERVAL
 done
