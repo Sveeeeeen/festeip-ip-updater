@@ -2,7 +2,7 @@
 
 To run this container use (do not forget to use your HOSTID/HOSTNAME/PASSWORD):
 
-docker run -d \
+docker run -d \\
 -e FIP_HOSTID=000000 \
 -e FIP_HOSTNAME=sub.mydomain.tld \
 -e FIP_PASSWORD=mypassword \
