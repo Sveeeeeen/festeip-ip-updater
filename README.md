@@ -12,4 +12,4 @@ docker run -d \\
 
 -e FIP_INTERVAL=5m \\
 
---name festeip-ip-updater  evilmoe/festeip-ip-updater
+--name festeip-ip-updater  evilmoe/festeip-ip-updater:latest
