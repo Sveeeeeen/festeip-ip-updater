@@ -29,7 +29,13 @@ do
     set -x
 	
     # get fancy
-    curl "https://$FIP_HOSTID:$FIP_PASSWORD@members.feste-ip.net/nic/update?hostname=$FIP_HOSTNAME"
+    curl \
+        --connect-timeout 5 \
+        --max-time 10 \
+        --retry 5 \
+        --retry-delay 0 \
+        --retry-max-time 60 \
+        "https://$FIP_HOSTID:$FIP_PASSWORD@members.feste-ip.net/nic/update?hostname=$FIP_HOSTNAME"
 	
     set +x
     sleep $FIP_INTERVAL
